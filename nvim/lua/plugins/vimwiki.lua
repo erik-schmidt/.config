@@ -1,0 +1,5 @@
+vim.cmd('highlight VimWikiHeader1 guifg=#E68183')
+vim.cmd('highlight VimWikiHeader3 guifg=#D39BB6')
+vim.cmd('highlight VimWikiHeader4 guifg=#87C095')
+vim.cmd('highlight VimWikiHeader5 guifg=#89BEBA')
+vim.cmd('highlight VimWikiHeader6 guifg=#D9BB80')
