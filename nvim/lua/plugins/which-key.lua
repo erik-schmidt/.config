@@ -81,7 +81,7 @@ function _terminal_toggle()
 end
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>f', ':lua require("telescope.builtin").find_files(require("telescope.themes").get_dropdown({}))<cr>', {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -89,14 +89,18 @@ vim.api.nvim_set_keymap('n', '<leader>;', ':Dashboard<CR>', {noremap = true, sil
 -- close buffer
 vim.api.nvim_set_keymap('n', '<leader>c', ':BufferClose<CR>', {noremap = true, silent = true})
 
--- Vista
+-- SymbolsOutline
 vim.api.nvim_set_keymap('n', '<leader>v', ':SymbolsOutline<CR>', {noremap = true, silent = true})
+
+-- Zen
+vim.api.nvim_set_keymap('n', '<leader>z', ':ZenMode<CR>', {noremap = true, silent = true})
 
 local mappings = {
 	["c"] = "Close Buffer",
 	["f"] = "Find Files",
 	[";"] = "Dashboard",
 	["v"] = "Symbols Outline",
+    ["z"] = "Zen Mode",
 	b = {
 		name = "+Buffer",
 		p = {"<cmd>BufferPrevious<cr>", "Previous Buffer"},
@@ -126,10 +130,10 @@ local mappings = {
 	g = {
 		name = "+Git",
 		B = {"<cmd>lua require'gitsigns'.blame_line()<cr>", "Blame Line"},
-		b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
-		c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
-		C = {"<cmd>Telescope git_bcommits<cr>", "Chechkout commit (for current file)"},
-		g = {"<cmd>Telescope git_status<cr>", "Open changed files"},
+		b = {'<cmd>lua require("telescope.builtin").git_branches(require("telescope.themes").get_dropdown({}))<cr>', "Checkout branch"},
+		c = {'<cmd>lua require("telescope.builtin").git_commits(require("telescope.themes").get_dropdown({}))<cr>', "Checkout commit"},
+		C = {'<cmd>lua require("telescope.builtin").git_bcommits(require("telescope.themes").get_dropdown({}))<cr>', "Chechkout commit (for current file)"},
+		g = {'<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>', "Open changed files"},
 		j = {"<cmd>lua require'gitsigns'.next_hunk()<cr>", "Next Hunk"},
         k = {"<cmd>lua require'gitsigns'.prev_hunk()<cr>", "Prev Hunk"},
         p = {"<cmd>lua require'gitsigns'.preview_hunk()<cr>", "Preview Hunk"},
@@ -150,8 +154,8 @@ local mappings = {
 		},
 		a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
         A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        d = {'<cmd>lua require("telescope.builtin").lsp_document_diagnostics(require("telescope.themes").get_dropdown({}))<cr>', "Document Diagnostics"},
+        D = {':lua require("telescope.builtin").lsp_workspace_diagnostics(require("telescope.themes").get_dropdown({}))<cr>', "Workspace Diagnostics"},
         f = {"<cmd>lua vim.lsp.buf.formatting()<cr>", "Format"},
 		h = {"<cmd>lua require('lspsaga.hover').render_hover_doc()<cr>", "Hover doc"},
 		H = {"<cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>", "Signature Help"},
@@ -159,10 +163,10 @@ local mappings = {
         l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
         L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
         p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+        q = {'<cmd>lua require("telescope.builtin").quickfix(require("telescope.themes").get_dropdown({}))<cr>', "Quickfix"},
         r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
-        S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"},
+        s = {'<cmd>lua require("telescope.builtin").lsp_document_symbols(require("telescope.themes").get_dropdown({}))<cr>', "Document Symbols"},
+        S = {'<cmd>lua require("telescope.builtin").lsp_workspace_symbols(require("telescope.themes").get_dropdown({}))<cr>', "Workspace Symbols"},
 		t = {"<cmd>LspTroubleToggle<cr>", "Diagnostics List"},
         x = {"<cmd>cclose<cr>", "Close Quickfix"},
 	},
@@ -180,16 +184,16 @@ local mappings = {
 	},
 	s = {
         name = "+Search",
-        b = {"<cmd>Telescope git_branches<cr>", "File"},
-        c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files<cr>", "Find File"},
-        m = {"<cmd>Telescope marks<cr>", "Marks"},
-        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-        R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope live_grep<cr>", "Text"}
+        b = {'<cmd>lua require("telescope.builtin").git_branches(require("telescope.themes").get_dropdown({}))<cr>', "File"},
+        c = {'<cmd>lua require("telescope.builtin").colorscheme(require("telescope.themes").get_dropdown({}))<cr>', "Colorscheme"},
+        d = {'<cmd>lua require("telescope.builtin").lsp_document_diagnostics(require("telescope.themes").get_dropdown({}))<cr>', "Document Diagnostics"},
+        D = {'<cmd>lua require("telescope.builtin").lsp_workspace_diagnostics(require("telescope.themes").get_dropdown({}))<cr>', "Workspace Diagnostics"},
+        f = {'<cmd>lua require("telescope.builtin").find_files(require("telescope.themes").get_dropdown({}))<cr>', "Find File"},
+        m = {'<cmd>lua require("telescope.builtin").marks(require("telescope.themes").get_dropdown({}))<cr>', "Marks"},
+        M = {'<cmd>lua require("telescope.builtin").man_pages(require("telescope.themes").get_dropdown({}))<cr>', "Man Pages"},
+        r = {'<cmd>lua require("telescope.builtin").oldfiles(require("telescope.themes").get_dropdown({}))<cr>', "Open Recent File"},
+        R = {'<cmd>lua require("telescope.builtin").registers(require("telescope.themes").get_dropdown({}))<cr>', "Registers"},
+        t = {'<cmd>lua require("telescope.builtin").live_grep(require("telescope.themes").get_dropdown({}))<cr>', "Text"}
     },
 	t = {
 		name = "+Terminal",
@@ -205,15 +209,6 @@ local mappings = {
 		l = {'<cmd>TestLast<cr>', "Run last test"},
 		v = {'<cmd>TestVisit<cr>', 'visit test file'}
 	},
-    z = {
-        name = "+Zen",
-        a = {"<cmd>TZAtaraxis<cr>", "Toggle Ataraxis mode"},
-        f = {"<cmd>TZFocus<cr>", "Toggle focus mode"},
-        m = {"<cmd>TZMinimalist<cr>", "Toggle minimalist mode"},
-        b = {"<cmd>TZBottom<cr>", "Toggle bottom UI"},
-        t = {"<cmd>TZTop<cr>", "Toggle top UI"},
-        l = {"<cmd>TZLeft<cr>", "Toggle left UI"}
-    },
 	S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
 }
 

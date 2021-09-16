@@ -11,10 +11,19 @@ require('telescope').setup {
         initial_mode = "insert",
         selection_strategy = "reset",
         sorting_strategy = "descending",
-        file_sorter = require'telescope.sorters'.get_fuzzy_file,
+		layout_strategy = 'vertical',
+		layout_config = {
+            horizontal = {
+                mirror = false
+            },
+            vertical = {
+                mirror = false
+            }
+		},
+        file_sorter = require("telescope.sorters").get_fzy_sorter,
         file_ignore_patterns = {},
         generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
-        shorten_path = true,
+        path_display = { "absolute" },
         winblend = 0,
         border = {},
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
@@ -25,15 +34,6 @@ require('telescope').setup {
         grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
         qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
 
-		layout_config = {
-            horizontal = {
-                mirror = false
-            },
-            vertical = {
-                mirror = false
-            }
-		},
-		layout_strategy = 'horizontal',
 
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,

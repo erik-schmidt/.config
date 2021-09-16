@@ -57,7 +57,7 @@ return require("packer").startup(
     use {"rafamadriz/friendly-snippets", opt = true}
 
     -- Indent Blankline
-    use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+    use {"lukas-reineke/indent-blankline.nvim"}
 
     -- Treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -97,7 +97,7 @@ return require("packer").startup(
     use {"kevinhwang91/nvim-bqf", opt = true}
 
     -- Zen Mode
-    use "Pocco81/TrueZen.nvim"
+    use "folke/zen-mode.nvim"
 
     -- Number line peeking
     use {"nacro90/numb.nvim",
@@ -193,7 +193,7 @@ return require("packer").startup(
 	require_plugin('lsp-trouble.nvim')
 	require_plugin('vim-test')
     require_plugin('nvim-comment')
-    require_plugin('TrueZen')
+    require_plugin('zen-mode.nvim')
     require_plugin('numb')
     require_plugin('symbols-outline')
     require_plugin('todo-comments')

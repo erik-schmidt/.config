@@ -31,8 +31,8 @@ require('plugins.trouble')
 require('plugins.vim-test')
 require('plugins.vimwiki')
 require('plugins.which-key')
-require('plugins.zen')
 require('plugins.symbols-outline')
+require('plugins.zen')
 
 -- LSP
 require('lsp')

@@ -1,49 +1,31 @@
-require('true-zen').setup({
-    true_false_commands = false,
-    cursor_by_mode = true,
-    bottom = {
-        hidden_laststatus = 0,
-        hidden_ruler = false,
-        hidden_showcmd = false,
-        hidden_showmode = false,
-        hidden_cmdheight = 1,
-
-        show_laststatus = 2,
-        show_ruler = true,
-        shown_showmode = false,
-        shown_showcmd = false,
-        shown_cmdheight = 2,
+require("zen-mode").setup {
+    window = {
+        backdrop = 0.85, -- shade the backdrop of the Zen window. set to 1 to keep the same as Normal
+        -- height and width can be:
+        -- * an absolute number of cells when > 1
+        -- * a percentage of the width / height of the editor when <= 1
+        width = 120, -- width of the Zen window
+        height = 1, -- height of the Zen window
+        -- by default, no options are changed for the Zen window
+        -- uncomment any of the options below, or add other vim.wo options you want to apply
+        options = {
+            signcolumn = "no", -- disable signcolumn
+            number = false, -- disable number column
+            relativenumber = false, -- disable relativenumbers
+            -- cursorline = false, -- disable cursorline
+            -- foldcolumn = "0", -- disable fold column
+            -- list = false, -- disable whitespace characters
+        },
     },
-    top = {
-        hidden_showtabline = 0,
-
-        shown_showtabline = 2,
-    },
-    left = {
-        hidden_number = false,
-        hidden_relativenumber = false,
-        hidden_signcolumn = "no",
-
-        shown_number = true,
-        shown_relativenumber = true,
-        shown_signcolumn = "yes",
-    },
-    ataraxis = {
-        ideal_writing_area_width = 0,
-        just_do_it_for_me = true,
-        top_padding = 1,
-        bottom_padding = 1,
-        force_when_plus_one_window = false,
-        force_hide_statusline = true,
-    },
-    integrations = {
-        integration_galaxyline = true,
-        integration_vim_airline = false,
-        integration_vim_powerline = false,
-        integration_tmux = false,
-        integration_express_line = false,
-        integration_gitgutter = false,
-        integration_vim_signify = false,
-        integration_limelight = false
+    plugins = {
+        -- disable some global vim options (vim.o...)
+        -- comment the lines to not apply the options
+        -- options = {
+        --     enabled = true,
+        --     ruler = false, -- disable the ruler text in the cmd line area
+        --     showcmd = false, -- disables the command in the last line of the screen
+        -- },
+        gitsigns = { enabled = false }, -- disables git signs
+        tmux = { enabled = false }, -- disables the tmux statusline
     }
-})
+}

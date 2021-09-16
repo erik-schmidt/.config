@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ':lua require("telescope.builtin").find_files(require("telescope.themes").get_dropdown({}))<cr>', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<c-j>', '(\"\\<C-n>")', { noremap = true, expr = true, silent = true})
 vim.api.nvim_set_keymap('n', '<c-k>', '(\"\\<C-p>")', { noremap = true, expr = true, silent = true})
