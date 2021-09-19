@@ -107,7 +107,11 @@ return require("packer").startup(
     }
 
     -- Git
-    use {"lewis6991/gitsigns.nvim", opt = true}
+    use {"lewis6991/gitsigns.nvim",
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
     -- Keybindings Guide
 	use {"folke/which-key.nvim", opt = true}

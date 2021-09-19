@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/erikschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/erikschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/erikschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/erikschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/erikschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/eschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/eschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/eschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/eschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/eschmidt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,225 +71,225 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["asyncrun.vim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/asyncrun.vim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/asyncrun.vim"
   },
   ["asynctasks.vim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/asynctasks.vim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/asynctasks.vim"
   },
   ["barbar.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
   ["dashboard-nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
   },
   edge = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/edge"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/edge"
   },
   everforest = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/everforest"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/everforest"
   },
   ["friendly-snippets"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/friendly-snippets"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/friendly-snippets"
   },
   ["galaxyline.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/galaxyline.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["lightspeed.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
   },
   ["lsp-status.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/lsp-status.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/lsp-status.nvim"
   },
   ["lsp-trouble.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/lsp-trouble.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/lsp-trouble.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim"
   },
   ["numb.nvim"] = {
     config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tnumb\frequire\0" },
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/numb.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/numb.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
   },
   ["nvim-bqf"] = {
     loaded = false,
     needs_bufread = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-bqf"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-bqf"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     config = { "\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17nvim_comment\frequire\0" },
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-comment"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-compe"] = {
-    after_files = { "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe.vim" },
+    after_files = { "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe.vim" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-compe"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-compe"
   },
   ["nvim-jqx"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-jqx"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-jqx"
   },
   ["nvim-lspconfig"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-lspinstall"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-lspinstall"
   },
   ["nvim-toggleterm.lua"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
   },
   ["nvim-tree.lua"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-treesitter-refactor"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-refactor"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-refactor"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
   },
   ["nvim-ts-rainbow"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-ts-rainbow"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   playground = {
     loaded = false,
     needs_bufread = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/playground"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/playground"
   },
   ["plenary.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/popup.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/popup.nvim"
   },
   ["surround.nvim"] = {
     config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0" },
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/surround.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/surround.nvim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/telescope-fzy-native.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/telescope-fzy-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = false,
-    needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+    needs_bufread = true,
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
   },
   ["todo-comments.nvim"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
   },
   ["vim-liquid"] = {
     loaded = false,
     needs_bufread = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/vim-liquid"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/vim-liquid"
   },
   ["vim-test"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/vim-test"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/vim-test"
   },
   ["vim-vsnip"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
   },
   ["which-key.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/opt/which-key.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/opt/which-key.nvim"
   },
   ["zen-mode.nvim"] = {
     loaded = true,
-    path = "/home/erikschmidt/.local/share/nvim/site/pack/packer/start/zen-mode.nvim"
+    path = "/home/eschmidt/.local/share/nvim/site/pack/packer/start/zen-mode.nvim"
   }
 }
 
@@ -298,14 +298,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for surround.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rsurround\frequire\0", "config", "surround.nvim")
 time([[Config for surround.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
 time([[Config for nvim-comment]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 -- Config for: numb.nvim
 time([[Config for numb.nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tnumb\frequire\0", "config", "numb.nvim")
