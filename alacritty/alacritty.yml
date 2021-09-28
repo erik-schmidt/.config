@@ -19,15 +19,15 @@ font:
         family: Fira Code
         style: Regular
     bold:
-        family: Fira Code
+        family: FiraCode Nerd Font Mono
         family: monospace
         style: Bold
     italic:
-        family: Fira Code
+        family: FiraCode Nerd Font Mono
         family: monospace
         style: Italic
     bold_italic:
-        family: Fira Code
+        family: FiraCode Nerd Font Mono
         family: monospace
         style: Bold Italic
     size: 13.0

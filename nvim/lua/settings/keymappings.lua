@@ -15,3 +15,7 @@ vim.api.nvim_set_keymap('n', '<Up>', ':resize +5<CR>', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<Down>', ':resize -5<CR>', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Right>', ':vertical resize -5<CR>', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Left>', ':vertical resize +5<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>lua require("tmux").move_left()<cr>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<cmd>lua require("tmux").move_down()<cr>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua require("tmux").move_up()<cr>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>lua require("tmux").move_right()<cr>', { noremap = true, silent = true})

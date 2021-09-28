@@ -67,8 +67,11 @@ return require("packer").startup(
     use {"p00f/nvim-ts-rainbow", opt = true}
     use {"windwp/nvim-ts-autotag", opt = true}
 
+    -- Tmux
+    use({ "nathom/tmux.nvim", config = [[require("config.tmux")]] })
+
     -- Explorer
-	use {"kyazdani42/nvim-tree.lua", opt = true}
+	use {"kyazdani42/nvim-tree.lua"}
 
 	-- Color
 	use 'norcalli/nvim-colorizer.lua'
