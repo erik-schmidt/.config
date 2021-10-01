@@ -4,47 +4,49 @@ local condition = require("galaxyline.condition")
 local diagnostic = require("galaxyline.provider_diagnostic")
 local section = gl.section
 
-local everforest_colors = {
-  bg = '#3C474D',
-  fg = '#d8caac',
-  black = "#465258",
-  blue = "#89beba",
-  cyan = "#87c095",
-  green = "#a7c080",
-  purple = "#d39bb6",
-  red = "#e68183",
-  orange = "#e69875",
-  white = "#CCCCCC",
-  yellow = "#d9bb80",
-  brightBlack = "#848A83",
-  brightBlue = "#89beba",
-  brightCyan = "#87c095",
-  brightGreen = "#a7c080",
-  brightPurple = "#d39bb6",
-  brightRed = "#e68183",
-  brightWhite = "#F2F2F2",
-  brightYellow = "#d9bb80"
-}
+local cp_api = require('catppuccino.api.colors')
+local err, colors = cp_api.get_colors('soft_manilo')
 
+-- local colors = {
+--  black_br = '#3C474D',
+--   fg = '#d8caac',
+--   black = "#465258",
+--   blue = "#89beba",
+--   cyan = "#87c095",
+--   green = "#a7c080",
+--   purple = "#d39bb6",
+--   red = "#e68183",
+--   orange = "#e69875",
+--   white = "#CCCCCC",
+--   yellow = "#d9bb80",
+--   brightBlack = "#848A83",
+--   brightBlue = "#89beba",
+--   brightCyan = "#87c095",
+--   brightGreen = "#a7c080",
+--   brightPurple = "#d39bb6",
+--   brightRed = "#e68183",
+--   brightWhite = "#F2F2F2",
+--   brightYellow = "#d9bb80"
+-- }
 local mode_color = function ()
 	local mode_color = {
-		[110] = everforest_colors.green,
-		[105] = everforest_colors.white,
-		[99] = everforest_colors.cyan,
-		[116] = everforest_colors.purple,
-		[118] = everforest_colors.red,
-		[22] = everforest_colors.red,
-		[86] = everforest_colors.red,
-		[82] = everforest_colors.orange,
-		[115] = everforest_colors.orange,
-		[83] = everforest_colors.orange,
+		[110] = colors.blue,
+		[105] = colors.green,
+		[99] = colors.magenta,
+		[116] = colors.magenta,
+		[118] = colors.red,
+		[22] = colors.red,
+		[86] = colors.red,
+		[82] = colors.orange,
+		[115] = colors.orange,
+		[83] = colors.orange,
 	}
 
 	local color = mode_color[fn.mode():byte()]
 	if color ~= nil then
 		return color
 	else
-		return everforest_colors.green
+		return colors.green
 	end
 end
 
@@ -84,7 +86,7 @@ section.left[1] = {
 			end
 			return '▊ ' .. mode .. ' '
 		end,
-		highlight = {everforest_colors.bg, everforest_colors.bg, "bold"}
+		highlight = {colors.black, colors.black, "bold"}
 	}
 }
 
@@ -93,8 +95,8 @@ section.left[2] = {
 		provider = {function () return '  ' end, 'FileIcon'},
 		condition = condition.buffer_not_empty,
 		highlight = {
-			everforest_colors.brightBlack,
-			everforest_colors.bg
+			colors.black_br,
+			colors.black
 		}
 	}
 }
@@ -104,11 +106,11 @@ section.left[3] = {
 		provider = 'FileTypeName',
 		condition = condition.buffer_not_empty,
 		highlight = {
-			everforest_colors.brightBlack,
-			everforest_colors.bg
+			colors.black_br,
+			colors.black
 		},
 		separator = "   ",
-		separator_highlight = {"NONE", everforest_colors.bg}
+		separator_highlight = {"NONE", colors.black}
 	}
 }
 
@@ -122,14 +124,14 @@ section.left[4] = {
 			end
 			return true
 		end,
-		highlight = {everforest_colors.brightBlack, everforest_colors.bg}
+		highlight = {colors.black_br, colors.black}
 	}
 }
 
 section.right[1] = {
 	DiagnosticCheck = {
 		provider = {LspCheckDiagnostics},
-		highlight = {everforest_colors.brightBlack, everforest_colors.bg}
+		highlight = {colors.black_br, colors.black}
 	}
 }
 
@@ -137,7 +139,7 @@ section.right[2] = {
 	DiagnosticError = {
 		provider = {"DiagnosticError"},
 		icon = '  ',
-		highlight = {everforest_colors.red, everforest_colors.bg}
+		highlight = {colors.red, colors.black}
 	}
 }
 
@@ -145,7 +147,7 @@ section.right[3] = {
 	DiagnosticWarn = {
 		provider = {'DiagnosticWarn'},
 		icon = '  ',
-		highlight = {everforest_colors.yellow, everforest_colors.bg}
+		highlight = {colors.yellow, colors.black}
 	}
 }
 
@@ -153,14 +155,14 @@ section.right[4] = {
 	DiagnosticInfo = {
 		provider = {"DiagnosticInfo"},
 		icon = '  ',
-		highlight = {everforest_colors.blue, everforest_colors.bg}
+		highlight = {colors.black_br, colors.black}
 	}
 }
 
 section.right[6] = {
 	SpaceSeparator = {
 		provider = {function () return ' ' end},
-		highlight = {everforest_colors.bg, everforest_colors.bg}
+		highlight = {colors.black, colors.black}
 	}
 }
 
@@ -168,7 +170,7 @@ section.right[7] = {
 	GitBranch = {
 		provider = {function() return '  ' end, 'GitBranch'},
 		condition = condition.check_git_workspace,
-		highlight = {everforest_colors.orange, everforest_colors.bg}
+		highlight = {colors.orange, colors.black}
 	}
 }
 
@@ -176,8 +178,8 @@ section.right[8] = {
 	PerCent = {
 		provider = 'LinePercent',
 		separator = ' ',
-		separator_highlight = {everforest_colors.bg, everforest_colors.bg},
-		highlight = {everforest_colors.brightBlack, everforest_colors.bg}
+		separator_highlight = {colors.black, colors.black},
+		highlight = {colors.black_br, colors.black}
 	}
 }
 
@@ -187,7 +189,7 @@ section.right[9] = {
 			vim.api.nvim_command('hi GalaxyViModeLine guifg=' .. mode_color())
 			return ' ▋'
 		end,
-		highlight = {everforest_colors.bg, everforest_colors.bg, "bold"}
+		highlight = {colors.black, colors.black, "bold"}
 	}
 }
 
@@ -199,18 +201,18 @@ section.short_line_left[1] = {
 	FileName = {
 		provider = 'FileName',
 		condition = condition.buffer_not_empty,
-		highlight = {everforest_colors.brightBlack, everforest_colors.bg},
+		highlight = {colors.brightBlack, colors.black},
 		separator = ' ',
-		separator_highlight = {everforest_colors.bg, everforest_colors.bg}
+		separator_highlight = {colors.black, colors.black}
 	}
 }
 
 section.short_line_right[1] = {
 	BufferIcon = {
 		provider = 'BufferIcon',
-		highlight = {everforest_colors.yellow, everforest_colors.bg},
+		highlight = {colors.yellow, colors.black},
 		separator = ' ',
-		separator_highlight = {everforest_colors.bg, everforest_colors.bg}
+		separator_highlight = {colors.black, colors.black}
 	}
 }
 

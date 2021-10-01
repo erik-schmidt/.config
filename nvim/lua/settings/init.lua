@@ -33,7 +33,7 @@ vim.cmd('set noerrorbells')
 vim.cmd('set noswapfile')
 vim.o.incsearch = true
 vim.o.scrolloff = 2
-vim.cmd('set colorcolumn=80')
+-- vim.cmd('set colorcolumn=80')
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.confirm = true
@@ -51,6 +51,6 @@ vim.cmd('set sw=4') -- Change the number of space characters inserted for indent
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevel = 20
-vim.cmd('set background=dark')
+vim.o.background = "dark"
 
 vim.cmd 'au TextYankPost * silent! lua require(\'vim.highlight\').on_yank({higroup = \'IncSearch\', timeout = 250})'

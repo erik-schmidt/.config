@@ -68,7 +68,7 @@ return require("packer").startup(
     use {"windwp/nvim-ts-autotag", opt = true}
 
     -- Tmux
-    use({ "nathom/tmux.nvim", config = [[require("config.tmux")]] })
+    use("nathom/tmux.nvim")
 
     -- Explorer
 	use {"kyazdani42/nvim-tree.lua"}
@@ -144,6 +144,11 @@ return require("packer").startup(
     use "sainnhe/everforest"
     use "sainnhe/edge"
     use "sainnhe/gruvbox-material"
+
+    use 'EdenEast/nightfox.nvim'
+    use "Pocco81/Catppuccino.nvim"
+
+    use "projekt0n/github-nvim-theme"
 
     -- Todo comments
     use {"folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim",
